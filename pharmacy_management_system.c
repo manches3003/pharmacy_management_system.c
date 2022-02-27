@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
-void disease();
-void display();
+void priscription();
+void customer();
 void main()
 {
     char first_name[10];
@@ -29,62 +29,48 @@ void main()
     scanf("%s", second_name);
 
     // used string concatenate to combine the first name and second name
+    printf("\n");
 
     strcat(first_name, second_name);
 
     printf("Your full name is %s \n", first_name);
+    printf("\n");
 
-    disease();
+    customer();
 }
 
-void display()
+void customer()
 {
-    printf("\t [1]: Headache \n");
-    printf("\t [2]: fever \n");
-    printf("\t [3]: Allergies \n");
-    printf("\t [4]: Cold and Flu \n");
-    printf("\t [5]: Conjuctivites \n");
-    printf("\t [6]: Diarrhea \n");
-    printf("\t [7]: stomach aches \n");
-}
 
-void disease()
-{
-    int disease;
+    int customer;
 
-    display();
+    printf("Did the customer brought his priscription: \n");
+    scanf("%d", &customer);
 
-    printf("which disease you have:");
-    scanf("%d", &disease);
-
-    switch (disease)
+    if (customer == 1)
     {
-    case 1:
-        printf("Headache");
-        break;
-
-    case 2:
-        printf("fever");
-        break;
-
-    case 3:
-        printf("Allergies");
-        break;
-
-    case 4:
-        printf("Cold and Flu");
-        break;
-
-    case 5:
-        printf("Conjuctivites");
-        break;
-
-    case 6:
-        printf("Diarrhea");
-        break;
-
-    case 7:
-        printf("stomach aches");
-        break;
+        priscription();
     }
+    else
+    {
+        printf("ohh!! So you have to first bring the priscription then..you can proceed further");
+    }
+}
+
+void priscription()
+{
+    char medicine[40];
+
+    int i, n;
+
+    printf("Write the no. of medicines that customer wants to buy: \n");
+    scanf("%d", &i);
+
+    for (n = 1; i = n; i++)
+    {
+        printf("Medicine %d:\n ", n);
+        scanf("%s", medicine);
+    }
+
+    printf("\n");
 }
