@@ -1,76 +1,85 @@
 #include <stdio.h>
 #include <string.h>
-void priscription();
-void customer();
-void main()
+void priscription ();
+void customer ();
+void
+main ()
 {
-    char first_name[10];
-    char second_name[10];
+  char first_name[10];
+  char second_name[10];
 
-    for (int i = 0; i < 100; i++)
+  for (int i = 0; i < 100; i++)
     {
-        printf("*");
+      printf ("*");
     }
 
-    // In our pharmacy only mild disease medicine available
-    printf("\n\t\t                welcome to our pharmacy!! \t\n");
+  // In our pharmacy only mild disease medicine available
+  printf ("\n\t\t welcome to our pharmacy!! \t\n");
 
-    for (int i = 0; i < 100; i++)
+  for (int i = 0; i < 100; i++)
     {
-        printf("*");
+      printf ("*");
     }
 
-    // first of the medicine you are buying for that means they have to write the patient name
+  // first of the medicine you are buying for that means they have to write the patient name
 
-    printf("\n Enter your first name: \n ");
-    scanf("%s", first_name);
+  printf ("\n Enter your first name: \n ");
+  scanf ("%s", first_name);
 
-    printf("Enter your second name: \n");
-    scanf("%s", second_name);
+  printf ("Enter your second name: \n");
+  scanf ("%s", second_name);
 
-    // used string concatenate to combine the first name and second name
-    printf("\n");
+  // used string concatenate to combine the first name and second name
+  printf ("\n");
 
-    strcat(first_name, second_name);
+  strcat (first_name, second_name);
 
-    printf("Your full name is %s \n", first_name);
-    printf("\n");
+  printf ("Your full name is %s \n", first_name);
+  printf ("\n");
 
-    customer();
+  customer ();
 }
 
-void customer()
+void
+customer ()
 {
 
-    int customer;
+  int customer;
 
-    printf("Did the customer brought his priscription: \n");
-    scanf("%d", &customer);
+  printf ("Did the customer brought his priscription, If yes enter 1: \n");
+  scanf ("%d", &customer);
 
-    if (customer == 1)
+  if (customer == 1)
     {
-        priscription();
+      priscription ();
     }
-    else
+  else
     {
-        printf("ohh!! So you have to first bring the priscription then..you can proceed further");
+      printf
+	("ohh!! Customer has to first bring the priscription then..you can proceed further");
     }
 }
 
-void priscription()
+void
+priscription ()
 {
-    char medicine[40];
+  char medicine[40];
 
-    int i, n;
+  int n, z, t;
+  char y[20];
 
-    printf("Write the no. of medicines that customer wants to buy: \n");
-    scanf("%d", &i);
+  printf ("\n Enter the name of medicine \n");
+  scanf ("%s", y);
+  printf ("\n Enter the Number of straps the customer wants\n");
+  scanf ("%d", &n);
+  printf ("\n Enter the current price of medicine\n");
+  scanf ("%d", &z);
 
-    for (n = 1; i = n; i++)
-    {
-        printf("Medicine %d:\n ", n);
-        scanf("%s", medicine);
-    }
+  t = n * z;
 
-    printf("\n");
+  printf
+    ("\n\n\n The Customer purchased %s medicine,So the total amount to be paid %d ",
+     y, t);
+
+  printf ("\n");
 }
